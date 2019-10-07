@@ -1,3 +1,5 @@
+Unity version 2018.4.10f1
+
 config.json is required to exist in this folder.
 temp.xml will be created, or overwritten if it exists. It contains logging information.
 A Python tool is provided for converting text files to the config.json variant. It
