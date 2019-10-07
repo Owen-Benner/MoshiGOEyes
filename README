@@ -1,4 +1,4 @@
-Unity version 2018.4.10f1
+Unity version 2018.4.10f1 (LTS)
 
 config.json is required to exist in this folder.
 temp.xml will be created, or overwritten if it exists. It contains logging information.
