@@ -1,5 +1,21 @@
 Unity version 2018.4.10f1 (LTS)
 
+Mountains:
+  Meadow:	
+    pink-	133.7 m			~32 m back
+    yellow-	133.4 m (raise 0.3)	~33 m back
+    cyan-	127.6 m (raise 6.1)	~38 m back
+    blue-	135.2 m (lower 1.5)	~38 m back
+
+    fence-	103.0 m
+    dif-	 30.7 m
+  Desert:
+    fence-	  1.8 m
+    peaks-	 32.5 m
+
+    orange-	 23.0 m (raise 10.7)
+    red-	 20.8 m (raise 12.9)
+
 config.json is required to exist in this folder.
 temp.xml will be created, or overwritten if it exists. It contains logging information.
 A Python tool is provided for converting text files to the config.json variant. It
