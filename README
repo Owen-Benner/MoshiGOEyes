@@ -7,16 +7,19 @@ Mountains:
     cyan-	127.6 m (raise 6.1)	~38 m back
     blue-	135.2 m (lower 1.5)	~38 m back
 
-    fence-	103.0 m
-    dif-	 30.7 m
+    fence-		103.0 m
+    fenceToPeaks-	 30.7 m
+    floor-		100.0 m
+    floorToFence-	  3.0 m
   Desert (after mountains scaled x1.5 (purple 1.75x)):
-    fence-	  1.8 m
-    peaks-	 32.5 m
+    fence-	  4.0 m
+    peaks-	 34.7 m
+    floor-	  1.0 m
 
-    orange-	 36.5 m (lower 4.0) ~21 m back
-    red-	 33.1 m (lower 0.6) ~19 m back
-    purple- 38.0 (lower 5.5) ~29 m back
-    green-  34.1 (lower 1.6) ~17 m back
+    orange-	 36.5 m (lower 1.8)	~21 m back
+    red-	 33.1 m (raise 1.6)	~19 m back
+    purple-	 38.0 m (lower 3.3)	~29 m back
+    green-  	 34.1 m (raise 0.6)	~17 m back
 
 config.json is required to exist in this folder.
 temp.xml will be created, or overwritten if it exists. It contains logging information.
