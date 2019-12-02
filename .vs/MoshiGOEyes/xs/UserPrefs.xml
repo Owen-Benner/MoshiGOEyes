@@ -9,6 +9,9 @@
         <State name="__root__">
           <Node name="MoshiGOEyes" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Editor" expanded="True">
+                <Node name="CrossPlatformInput" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="LandmarkSpawner.cs" selected="True" />
               </Node>
