@@ -191,7 +191,7 @@ public class Logger : MonoBehaviour {
         while(true){
             while(Time.time < nextTime)
                 yield return null;
-            WriteFrame(null, null); //Fill these in!
+            WriteFrame("frame");
             nextTime += waitTime;
         }
     }
