@@ -24,14 +24,14 @@ Line 4: Object trigger radius, float
 Line 5: Time player can't input after discovering object, float, seconds
 Line 6: Time for player to turn and face object, float, seconds
 Line 7: Key to trigger action, string, http://answers.unity3d.com/questions/762073/c-list-of-string-name-for-inputgetkeystring-name.html
-Line 8: List of indicies of object to show to player
+Line 8: List of indices of object to show to player
 Line 9: List of float, time object is shown to player
 Line 10: List of float, time grey screen is shown to player, in seconds
 Line 11: List of float, time second grey screen is shown to player, in seconds
-Line 12: List of environment indicies
+Line 12: List of environment indices
 Line 13: List of float for max time in in environment, in seconds
 Line 14: List of float for max time in in environment after seeing object, in seconds
-Line 15: List of indicies in environment where object will spawn
+Line 15: List of indices in environment where object will spawn
 Line 16: List of bools (1 or 0) deciding if object will always be shown or not. 1 means to show the object, any other value means not to.
-Line 17: List of indicies in environment where player will spawn, -1 means player will not be respawned
-Line 18: List of indicies in environment where landmark will spawn
+Line 17: List of indices in environment where player will spawn, -1 means player will not respawn
+Line 18: List of indices in environment where landmark will spawn
