@@ -15,8 +15,10 @@ public class SimpleMovement : MonoBehaviour
 
     private bool forward;
 
-    public Vector3 move;
-    public Vector3 rotate;
+    private Vector3 move;
+    private Vector3 rotate;
+
+    private Config config = null;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,9 @@ public class SimpleMovement : MonoBehaviour
 	cc = GetComponent<CharacterController>();
 	move = Vector3.zero;
 	rotate = Vector3.zero;
+
+        config = GameObject.Find("Logic").GetComponent<Logic>().globalConfig;
+        moveSpeed = config.playerMoveSpeed;
     }
 
     // Update is called once per frame

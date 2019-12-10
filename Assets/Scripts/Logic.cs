@@ -13,6 +13,8 @@ public class Logic : MonoBehaviour {
     public GameObject Environments = null;
     public GameObject CanvasCoord = null;
 
+    public GameObject [] Mountains;
+
     public Config globalConfig = null; // Global settings, like actionKey
 
     private bool fplayerfoundtarget = false;
@@ -80,8 +82,27 @@ public class Logic : MonoBehaviour {
         // Show GrayScreen
         yield return StartCoroutine(ShowGrayScreen(s.objShowIndex, s.showTime, s.greyScreenTime));
 
+        // Fix index, get mountain info
+        int index = s.envIndex;
+        bool mountains = true;
+        if(index == 3)
+        {
+            index = 0;
+            mountains = false;
+        }
+        else if(index == 4)
+        {
+            index = 1;
+            mountains = false;
+        }
+
         // Env we'll be sending message to
-        GameObject curenv = GetEnvGO(Environments, s.envIndex);
+        GameObject curenv = GetEnvGO(Environments, index);
+
+        // Set mountain visibility
+        if(index < Mountains.Length)
+            Mountains[index].active = mountains;
+
 
         // Setup player
         if(s.playerSpawnIndex >= 0){
