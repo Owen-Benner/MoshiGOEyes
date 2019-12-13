@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{1FB469D7-AF25-1141-54F1-79992A43FF89}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SimpleMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Logic.cs">
     <Files>
-      <File FileName="Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" Line="92" Column="42" />
-      <File FileName="Assets/Scripts/LandmarkSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Logger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SimpleMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs" Line="93" Column="35" />
+      <File FileName="Assets/Scripts/Logic.cs" Line="38" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +13,7 @@
                 <Node name="CrossPlatformInput" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="SimpleMovement.cs" selected="True" />
+                <Node name="Logic.cs" selected="True" />
               </Node>
             </Node>
           </Node>

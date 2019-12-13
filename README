@@ -3,9 +3,8 @@ Unity version 2018.4.10f1 (LTS)
 Environment indices:
     Meadow-0
     Desert-1
-    Inf Grass-2
-    Meadow (no mountains)-3
-    Desert (no mountains)-4
+    Meadow (no mountains)-2
+    Desert (no mountains)-3
 
 Mountains:
   Meadow:	
@@ -28,10 +27,13 @@ Mountains:
     purple-	 38.0 m (lower 3.3)	~29 m back
     green-  	 34.1 m (raise 0.6)	~17 m back
 
-config.json is required to exist in this folder.
-temp.xml will be created, or overwritten if it exists. It contains logging information.
-A Python tool is provided for converting text files to the config.json variant. It
-takes a files as its first argument and outputs the config.json through
+"config.json" is required to exist in this folder.
+
+"temp.xml" will be created, or overwritten if it exists.
+It contains logging information.
+
+A Python tool is provided for converting text files to the config.json variant.
+It takes a filename as its first argument and outputs the config.json through
 stdout.
 usage:
     python3 texttojson.py normalconfig.txt > config.json

@@ -85,12 +85,12 @@ public class Logic : MonoBehaviour {
         // Fix index, get mountain info
         int index = s.envIndex;
         bool mountains = true;
-        if(index == 3)
+        if(index == 2)
         {
             index = 0;
             mountains = false;
         }
-        else if(index == 4)
+        else if(index == 3)
         {
             index = 1;
             mountains = false;
