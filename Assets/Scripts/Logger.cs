@@ -36,7 +36,7 @@ public class Logger : MonoBehaviour {
 
 	//The goal the player is trying to move towards
 	private Vector3 goalDestination;
-	
+
 	//The origin of each world
 	private Vector3 relativeOrigin;
 
@@ -54,6 +54,15 @@ public class Logger : MonoBehaviour {
 
 	//Time take to find object
 	private float timeStart;
+
+        public GameObject eyeObject;
+
+        private EyeTracker eyes;
+
+        void Awake()
+        {
+            eyes = eyeObject.GetComponent<EyeTracker>();
+        }
 
 	//
 	//Public methods
@@ -152,6 +161,22 @@ public class Logger : MonoBehaviour {
 		m_writer.WriteAttributeString("timestamp", Time.time.ToString());
 		m_writer.WriteAttributeString("x", (t.position.x - relativeOrigin.x).ToString());
 		m_writer.WriteAttributeString("y", (t.position.z - relativeOrigin.z).ToString());
+
+            //Start eye data
+            m_writer.WriteAttributeString("left eye x",
+                eyes.GetLeftX().ToString());
+            m_writer.WriteAttributeString("left eye y",
+                eyes.GetLeftY().ToString());
+            m_writer.WriteAttributeString("left pupil",
+                eyes.GetLeftPupil().ToString());
+            m_writer.WriteAttributeString("right eye x",
+                eyes.GetRightX().ToString());
+            m_writer.WriteAttributeString("right eye y",
+                eyes.GetRightY().ToString());
+            m_writer.WriteAttributeString("right pupil",
+                eyes.GetRightPupil().ToString());
+            //End eye data
+
         if(extraAttrib != null){
             m_writer.WriteAttributeString("result", extraAttrib);
         }
