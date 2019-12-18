@@ -10,11 +10,6 @@ public class EyeTracker : MonoBehaviour
 
     private static GazeDataEventArgs gaze;
 
-    private GazePoint left;
-    private GazePoint right;
-    private PupilData lPupil;
-    private PupilData rPupil;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +26,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetLeftX()
     {
+        GazePoint left = gaze.LeftEye.GazePoint;
         if(left.Validity == Validity.Valid)
             return left.PositionOnDisplayArea.X;
         else
@@ -39,6 +35,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetLeftY()
     {
+        GazePoint left = gaze.LeftEye.GazePoint;
         if(left.Validity == Validity.Valid)
             return left.PositionOnDisplayArea.Y;
         else
@@ -47,6 +44,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetLeftPupil()
     {
+        PupilData lPupil = gaze.LeftEye.Pupil;
         if(lPupil.Validity == Validity.Valid)
             return lPupil.PupilDiameter;
         else
@@ -55,6 +53,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetRightX()
     {
+        GazePoint right = gaze.RightEye.GazePoint;
         if(right.Validity == Validity.Valid)
             return right.PositionOnDisplayArea.X;
         else
@@ -63,6 +62,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetRightY()
     {
+        GazePoint right = gaze.RightEye.GazePoint;
         if(right.Validity == Validity.Valid)
             return right.PositionOnDisplayArea.Y;
         else
@@ -71,6 +71,7 @@ public class EyeTracker : MonoBehaviour
 
     public float GetRightPupil()
     {
+        PupilData rPupil = gaze.RightEye.Pupil;
         if(rPupil.Validity == Validity.Valid)
             return rPupil.PupilDiameter;
         else
@@ -80,10 +81,7 @@ public class EyeTracker : MonoBehaviour
     private void EyeTracker_GazeDataReceived(object sender, GazeDataEventArgs e)
     {
         gaze = e;
-        left = gaze.LeftEye.GazePoint;
-        right = gaze.RightEye.GazePoint;
-        lPupil = gaze.LeftEye.Pupil;
-        rPupil = gaze.RightEye.Pupil;
+        Debug.Log("Recieved gaze data.");
     }
 
     private void OnApplicationQuit()
