@@ -163,18 +163,60 @@ public class Logger : MonoBehaviour {
 		m_writer.WriteAttributeString("y", (t.position.z - relativeOrigin.z).ToString());
 
             //Start eye data
-            m_writer.WriteAttributeString("left eye x",
-                eyes.GetLeftX().ToString());
-            m_writer.WriteAttributeString("left eye y",
-                eyes.GetLeftY().ToString());
-            m_writer.WriteAttributeString("left pupil",
-                eyes.GetLeftPupil().ToString());
-            m_writer.WriteAttributeString("right eye x",
-                eyes.GetRightX().ToString());
-            m_writer.WriteAttributeString("right eye y",
-                eyes.GetRightY().ToString());
-            m_writer.WriteAttributeString("right pupil",
-                eyes.GetRightPupil().ToString());
+            try
+            {
+                m_writer.WriteAttributeString("leftEyeX",
+                    eyes.GetLeftX().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("leftEyeX", "error");
+            }
+            try
+            {
+                m_writer.WriteAttributeString("leftEyeY",
+                    eyes.GetLeftY().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("leftEyeY", "error");
+            }
+            try
+            {
+                m_writer.WriteAttributeString("leftPupil",
+                    eyes.GetLeftPupil().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("leftPupil", "error");
+            }
+            try
+            {
+                m_writer.WriteAttributeString("rightEyeX",
+                    eyes.GetRightX().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("rightEyeX", "error");
+            }
+            try
+            {
+                m_writer.WriteAttributeString("rightEyeY",
+                    eyes.GetRightY().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("rightEyeY", "error");
+            }
+            try
+            {
+                m_writer.WriteAttributeString("rightPupil",
+                    eyes.GetRightPupil().ToString());
+            }
+            catch
+            {
+                m_writer.WriteAttributeString("rightPupil", "error");
+            }
             //End eye data
 
         if(extraAttrib != null){
