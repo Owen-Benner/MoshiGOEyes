@@ -298,6 +298,11 @@ public class Logic : MonoBehaviour {
         Config config = Config.Create(configjson);
         globalConfig = config;
 
+        if(globalConfig.replay == false)
+            Debug.Log("Not a replay");
+        if(globalConfig.replay == true)
+            Debug.Log("Replay");
+
         // Setup logger
         Logger logger = GetComponent<Logger>();
         logger.InitLogger(globalConfig.subjectName);

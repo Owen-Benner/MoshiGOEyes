@@ -5,6 +5,7 @@ explore
 0.5
 2.0
 space
+false
 2
 3
 10
@@ -16,6 +17,7 @@ Line 4: Object trigger radius, float
 Line 5: Time player can't input after discovering object, float, seconds (unused)
 Line 6: Time for player to turn and face object, float, seconds (unused)
 Line 7: Key to trigger action, string, http://answers.unity3d.com/questions/762073/c-list-of-string-name-for-inputgetkeystring-name.html
-Line 8: Environment index
-Line 9: Player spawn index
-Line 10: time in environment in seconds
+Line 8: Replay? (true/false)
+Line 9: Environment index
+Line 10: Player spawn index
+Line 11: time in environment in seconds

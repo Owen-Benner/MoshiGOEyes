@@ -13,7 +13,7 @@ def prettydumps(obj):
 def toints(line):
     return (int(i) for i in line.split(" "))
 
-def createconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, actionKey, scenes, pauseTime, lookSlerpTime):
+def createconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, actionKey, scenes, pauseTime, lookSlerpTime, replay):
     return {
             "scenes" : list(scenes),
             "phaseName": phaseName,
@@ -23,17 +23,18 @@ def createconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, acti
             "actionKey": actionKey,
             "pauseTime": pauseTime,
             "lookSlerpTime": lookSlerpTime,
+            "replay": replay,
     }
 
-def createcreateconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, pauseTime, lookSlerpTime, actionKey):
+def createcreateconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, pauseTime, lookSlerpTime, actionKey, replay):
     """Returns a function that only needs a list of scenes to create the config"""
     def f(scenes):
-        return createconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, actionKey, scenes, pauseTime, lookSlerpTime)
+        return createconfig(phaseName, subjectName, playerMoveSpeed, objTriggerRadius, actionKey, scenes, pauseTime, lookSlerpTime, replay)
     return f
 
 def parsenormal(lines, infolines, configfunc):
     def gen():
-        for info in map(list, zip(*map(toints, lines[7:17+1]))): # Grabbing ea column in text file
+        for info in map(list, zip(*map(toints, lines[8:18+1]))): # Grabbing ea column in text file
             yield {
                 "mode": "normal",
                 "objShowIndex" : info[0],
@@ -80,4 +81,4 @@ if __name__ == "__main__":
     filename = sys.argv[1]
     with open(filename, "r") as f:
         lines = [l.rstrip() for l in f.readlines()]
-        print(handlers.get(lines[0], err)(lines, lines[7:], createcreateconfig(*lines[0:7])))
+        print(handlers.get(lines[0], err)(lines, lines[8:], createcreateconfig(*lines[0:8])))
