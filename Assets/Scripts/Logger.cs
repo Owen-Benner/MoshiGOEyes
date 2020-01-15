@@ -59,7 +59,7 @@ public class Logger : MonoBehaviour {
 
         private EyeTracker eyes;
 
-        void Awake()
+        void Start()
         {
             eyes = eyeObject.GetComponent<EyeTracker>();
         }

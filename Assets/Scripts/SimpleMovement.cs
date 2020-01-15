@@ -19,6 +19,7 @@ public class SimpleMovement : MonoBehaviour
     private Vector3 rotate;
 
     private Config config = null;
+    private bool replay;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class SimpleMovement : MonoBehaviour
 	rotate = Vector3.zero;
 
         config = GameObject.Find("Logic").GetComponent<Logic>().globalConfig;
+        replay = config.replay;
         moveSpeed = config.playerMoveSpeed;
     }
 
